@@ -1,5 +1,6 @@
 # Fec
 [![Gem Version](https://badge.fury.io/rb/fec.svg)](https://badge.fury.io/rb/fec)
+
 Rename all files extension inside folder (including recursive folder).
 
 Required:
