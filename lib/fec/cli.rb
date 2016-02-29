@@ -3,6 +3,7 @@ require 'thor'
 require 'rainbow'
 require_relative 'file_helper'
 require_relative 'messenger'
+require 'pry'
 
 module Fec
   class FileExtensionChanger < Thor
@@ -23,8 +24,8 @@ module Fec
       new_extension = options.fetch('new_extension')
 
       Dir.entries("#{folder_path}/").each do |name|
-        if directory?(folder_path, name)
-          path = "#{folder_path}/#{name}"
+        path = "#{folder_path}/#{name}"
+        if directory?(path)
           notice_message("Processing #{path}")
           rename(path)
         elsif name.downcase.include? old_extension
