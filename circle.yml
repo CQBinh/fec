@@ -11,4 +11,4 @@ dependencies:
     - gem install bundler
 test:
   pre:
-    - bin/checker.sh
+    - bin/fec_lint_checker.sh
